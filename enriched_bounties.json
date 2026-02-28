@@ -1,0 +1,333 @@
+[
+  {
+    "number": 1434,
+    "title": "[Issue] The `rl,rls` options are not supported",
+    "url": "https://github.com/projectdiscovery/subfinder/issues/1434",
+    "state": "open",
+    "labels": [
+      "Type: Bug",
+      "💎 Bounty",
+      "$75"
+    ],
+    "comment_count": 18,
+    "repository": "projectdiscovery/subfinder",
+    "created_at": "2024-11-04T01:08:56Z",
+    "updated_at": "2026-02-27T20:57:45Z",
+    "author": "Bundy01",
+    "hunter_intelligence": {
+      "friction_level": "Medium",
+      "technical_hint": "Rate-limiting bug. Re-evaluate the rl, rls options for sitedossier source. Check if c3d8a02 commit logic needs to be ported to current version.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 75
+    }
+  },
+  {
+    "number": 6674,
+    "title": "Replace panic with error handling in template loader when dialers are missing",
+    "url": "https://github.com/projectdiscovery/nuclei/issues/6674",
+    "state": "open",
+    "labels": [
+      "Type: Bug",
+      "💎 Bounty",
+      "$100"
+    ],
+    "comment_count": 36,
+    "repository": "projectdiscovery/nuclei",
+    "created_at": "2025-12-07T18:53:59Z",
+    "updated_at": "2026-02-27T19:32:23Z",
+    "author": "coderabbitai[bot]",
+    "hunter_intelligence": {
+      "friction_level": "Low",
+      "technical_hint": "Straightforward fix. Replace panic with fmt.Errorf in pkg/catalog/loader/loader.go and propagate errors to lazy.go. Good for quick payout.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 100
+    }
+  },
+  {
+    "number": 6592,
+    "title": "[BUG] Authenticated scanning starts executing templates before the secret-file template finishes",
+    "url": "https://github.com/projectdiscovery/nuclei/issues/6592",
+    "state": "open",
+    "labels": [
+      "Type: Bug",
+      "💎 Bounty",
+      "$100"
+    ],
+    "comment_count": 18,
+    "repository": "projectdiscovery/nuclei",
+    "created_at": "2025-11-06T15:54:58Z",
+    "updated_at": "2026-02-28T02:36:42Z",
+    "author": "anze3db",
+    "hunter_intelligence": {
+      "friction_level": "Medium",
+      "technical_hint": "Race condition in authenticated scanning. The secret-file template needs to complete before other templates start. Check template execution ordering in runner.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 100
+    }
+  },
+  {
+    "number": 6532,
+    "title": "Integrate typos tool into CI",
+    "url": "https://github.com/projectdiscovery/nuclei/issues/6532",
+    "state": "open",
+    "labels": [
+      "Type: Maintenance",
+      "💎 Bounty",
+      "$100"
+    ],
+    "comment_count": 21,
+    "repository": "projectdiscovery/nuclei",
+    "created_at": "2025-10-14T10:19:21Z",
+    "updated_at": "2026-02-27T18:58:59Z",
+    "author": "coderabbitai[bot]",
+    "hunter_intelligence": {
+      "friction_level": "Low",
+      "technical_hint": "CI Integration task. Add typos GitHub Action to .github/workflows. Reference existing CI patterns and typos documentation.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 100
+    }
+  },
+  {
+    "number": 6403,
+    "title": "[FEATURE] Add honeypot detection to nuclei",
+    "url": "https://github.com/projectdiscovery/nuclei/issues/6403",
+    "state": "open",
+    "labels": [
+      "Type: Enhancement",
+      "💎 Bounty",
+      "$250"
+    ],
+    "comment_count": 28,
+    "repository": "projectdiscovery/nuclei",
+    "created_at": "2025-08-20T09:01:19Z",
+    "updated_at": "2026-02-27T21:04:49Z",
+    "author": "Ice3man543",
+    "hunter_intelligence": {
+      "friction_level": "Medium",
+      "technical_hint": "Strategic Enhancement. Design a 'Control Template' check to detect honeypots that return 200 OK for all patterns. Focus on fingerprinting 'False Positive' behavior.",
+      "bounty_tier": "A-Tier",
+      "bounty_amount": 250
+    }
+  },
+  {
+    "number": 6398,
+    "title": "[BUG] Fuzzing templates skips numeric path parts",
+    "url": "https://github.com/projectdiscovery/nuclei/issues/6398",
+    "state": "open",
+    "labels": [
+      "Priority: High",
+      "Type: Bug",
+      "💎 Bounty",
+      "$150"
+    ],
+    "comment_count": 31,
+    "repository": "projectdiscovery/nuclei",
+    "created_at": "2025-08-19T23:49:00Z",
+    "updated_at": "2026-02-27T21:03:36Z",
+    "author": "Mzack9999",
+    "hunter_intelligence": {
+      "friction_level": "Low",
+      "technical_hint": "REGRESSION detected. Path-based fuzzing skips numeric segments. Compare pkg/protocols/http/fuzzing between v3.4.7 and v3.4.8 to identify the breaking commit.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 150
+    }
+  },
+  {
+    "number": 5838,
+    "title": "XSS Context Analyzer",
+    "url": "https://github.com/projectdiscovery/nuclei/issues/5838",
+    "state": "open",
+    "labels": [
+      "Type: Enhancement",
+      "💎 Bounty",
+      "$200"
+    ],
+    "comment_count": 53,
+    "repository": "projectdiscovery/nuclei",
+    "created_at": "2024-11-19T06:19:43Z",
+    "updated_at": "2026-02-27T20:03:42Z",
+    "author": "ehsandeep",
+    "hunter_intelligence": {
+      "friction_level": "High",
+      "technical_hint": "Complex feature. Build XSS context analyzer to detect injection points in HTML/JS/attribute contexts. Consider using HTML parser and state machine approach.",
+      "bounty_tier": "A-Tier",
+      "bounty_amount": 200
+    }
+  },
+  {
+    "number": 5567,
+    "title": "[FEATURE] Template Profile Improvements",
+    "url": "https://github.com/projectdiscovery/nuclei/issues/5567",
+    "state": "open",
+    "labels": [
+      "Type: Enhancement",
+      "💎 Bounty",
+      "$150"
+    ],
+    "comment_count": 22,
+    "repository": "projectdiscovery/nuclei",
+    "created_at": "2024-08-25T07:46:54Z",
+    "updated_at": "2026-02-27T21:04:23Z",
+    "author": "tarunKoyalwar",
+    "hunter_intelligence": {
+      "friction_level": "Medium",
+      "technical_hint": "Config improvement. Extend goflags to support embedded file content and ignore extra YAML fields in template profiles.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 150
+    }
+  },
+  {
+    "number": 2063,
+    "title": "Add PDF export option",
+    "url": "https://github.com/projectdiscovery/nuclei/issues/2063",
+    "state": "open",
+    "labels": [
+      "Type: Enhancement",
+      "💎 Bounty",
+      "$25"
+    ],
+    "comment_count": 9,
+    "repository": "projectdiscovery/nuclei",
+    "created_at": "2022-05-25T11:24:01Z",
+    "updated_at": "2026-02-27T23:44:13Z",
+    "author": "forgedhallpass",
+    "hunter_intelligence": {
+      "friction_level": "Low",
+      "technical_hint": "PDF export feature. Use a Go PDF library (e.g., gofpdf) to convert scan results to formatted PDF reports.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 25
+    }
+  },
+  {
+    "number": 2240,
+    "title": "-pr http11 flag is ignored on retryablehttp-go due to HTTP/2 fallback",
+    "url": "https://github.com/projectdiscovery/httpx/issues/2240",
+    "state": "open",
+    "labels": [
+      "Type: Bug",
+      "💎 Bounty",
+      "$100"
+    ],
+    "comment_count": 21,
+    "repository": "projectdiscovery/httpx",
+    "created_at": "2025-08-13T02:24:40Z",
+    "updated_at": "2026-02-27T21:05:02Z",
+    "author": "khs-alt",
+    "hunter_intelligence": {
+      "friction_level": "High",
+      "technical_hint": "Protocol Conflict. Inject a DisableHTTP2 option into the retryablehttp-go transport layer to honor the -pr http11 flag. Watch out for overlapping PRs.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 100
+    }
+  },
+  {
+    "number": 924,
+    "title": "Support auto wildcard detection similar to PureDNS",
+    "url": "https://github.com/projectdiscovery/dnsx/issues/924",
+    "state": "open",
+    "labels": [
+      "Type: Enhancement",
+      "💎 Bounty",
+      "$100"
+    ],
+    "comment_count": 20,
+    "repository": "projectdiscovery/dnsx",
+    "created_at": "2025-12-04T20:55:07Z",
+    "updated_at": "2026-02-28T02:37:58Z",
+    "author": "xhzeem",
+    "hunter_intelligence": {
+      "friction_level": "Medium",
+      "technical_hint": "Wildcard detection. Implement puredns-style auto wildcard discovery using random subdomain probing and response fingerprinting.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 100
+    }
+  },
+  {
+    "number": 1367,
+    "title": "Feature / Question: go-tree-sitter dependency",
+    "url": "https://github.com/projectdiscovery/katana/issues/1367",
+    "state": "open",
+    "labels": [
+      "Type: Enhancement",
+      "💎 Bounty",
+      "$200"
+    ],
+    "comment_count": 27,
+    "repository": "projectdiscovery/katana",
+    "created_at": "2025-08-13T16:00:24Z",
+    "updated_at": "2026-02-27T21:04:54Z",
+    "author": "aautumn725",
+    "hunter_intelligence": {
+      "friction_level": "Medium",
+      "technical_hint": "CGO Elimination. Target is to replace smacker/go-tree-sitter with a pure Go alternative (e.g., modernc.org/cc) to unblock darwin/arm64 cross-compilation.",
+      "bounty_tier": "A-Tier",
+      "bounty_amount": 200
+    }
+  },
+  {
+    "number": 611,
+    "title": "`-jsonl` option with `-headless` option results in error",
+    "url": "https://github.com/projectdiscovery/katana/issues/611",
+    "state": "open",
+    "labels": [
+      "Type: Bug",
+      "💎 Bounty",
+      "$75"
+    ],
+    "comment_count": 24,
+    "repository": "projectdiscovery/katana",
+    "created_at": "2023-10-01T18:00:50Z",
+    "updated_at": "2026-02-27T23:22:41Z",
+    "author": "ErikOwen",
+    "hunter_intelligence": {
+      "friction_level": "Medium",
+      "technical_hint": "Headless mode timeout. Debug DOM acquisition in hybrid crawler mode. Check chromedp context timeout settings.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 75
+    }
+  },
+  {
+    "number": 859,
+    "title": "-l -list option does not understand multiple prefixes, comma-separated in a single line",
+    "url": "https://github.com/projectdiscovery/tlsx/issues/859",
+    "state": "open",
+    "labels": [
+      "Type: Bug",
+      "💎 Bounty",
+      "$75"
+    ],
+    "comment_count": 17,
+    "repository": "projectdiscovery/tlsx",
+    "created_at": "2025-08-09T14:14:00Z",
+    "updated_at": "2026-02-28T02:36:50Z",
+    "author": "hubrandesk789",
+    "hunter_intelligence": {
+      "friction_level": "Low",
+      "technical_hint": "Input parsing bug. Add comma-separated prefix splitting in the -l/-list option handler, similar to -u option behavior.",
+      "bounty_tier": "B-Tier",
+      "bounty_amount": 75
+    }
+  },
+  {
+    "number": 819,
+    "title": "tlsx hangs indefinitely for some hosts",
+    "url": "https://github.com/projectdiscovery/tlsx/issues/819",
+    "state": "open",
+    "labels": [
+      "Type: Bug",
+      "💎 Bounty",
+      "$1.2k"
+    ],
+    "comment_count": 24,
+    "repository": "projectdiscovery/tlsx",
+    "created_at": "2025-05-09T10:47:31Z",
+    "updated_at": "2026-02-27T19:14:41Z",
+    "author": "msecrfe",
+    "hunter_intelligence": {
+      "friction_level": "High",
+      "technical_hint": "S-Tier Target. Investigative work needed on the auto scan-mode concurrency loop. Suspected unclosed channels or goroutine leak after 25k+ targets. Check sync.WaitGroup implementation.",
+      "bounty_tier": "S-Tier",
+      "bounty_amount": 1200
+    }
+  }
+]

@@ -1,6 +1,64 @@
 Distributed Networks Institute (DNI) aims to help infrastructure resilience and financial health of distributed networks through scientific, engineering, and educational efforts. We are a part of a 501(c)3 non-profit incubator in Washington, DC called [BlockShop](https://blockshop.org/). Constantly on the lookout for talent, we encourage anyone to contribute code, market analysis, and engineering expertise to one of our [active projects](https://dn.institute/#projects). Multiple research grants and [code bounties](https://github.com/1712n/dn-institute/labels/%F0%9F%92%B0%20bounty) are available.
 
-## 🏆 Challenge Program
+## � PD-Hunter Intelligence (PDHI)
+
+**[📊 Live Dashboard](https://fuzoe.github.io/dn-institute/dashboard.html)** | Real-time AI-enriched tactical insights for ProjectDiscovery bounties
+
+### Features
+
+- **Hunter Cards** - Each bounty displays Technical Hint, Bounty Amount, and Friction Level
+- **S-Tier Highlighting** - High-value bounties (like the $1.2k TLSX issue) are prominently featured
+- **Expert Intelligence** - Curated hints preserved across updates, AI-generated for new issues
+- **Auto-Refresh** - Data pipeline runs every 6 hours via GitHub Actions
+
+### How It Works
+
+```
+┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│  GitHub Issues  │────▶│  Go Scraper      │────▶│  bounty_issues  │
+│  (PD Repos)     │     │  fetch_bounty_   │     │  .json          │
+└─────────────────┘     │  issues.go       │     └────────┬────────┘
+                        └──────────────────┘              │
+                                                          ▼
+┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│  index.html     │◀────│  Python Enricher │◀────│  GPT-4o AI      │
+│  (Dashboard)    │     │  enrich_bounties │     │  (new issues)   │
+└─────────────────┘     │  .py             │     └─────────────────┘
+                        └──────────────────┘
+                               │
+                               ▼
+                        Expert Hints are
+                        PRESERVED for
+                        existing issues
+```
+
+### Automation Pipeline
+
+The `.github/workflows/update_bounties.yml` workflow:
+
+1. **Triggers** every 6 hours + manual dispatch
+2. **Scrapes** latest bounty issues from ProjectDiscovery repos
+3. **Enriches** with AI analysis (preserving existing expert hints)
+4. **Updates** the dashboard with fresh data
+5. **Commits** changes back to the repository
+
+### Local Development
+
+```bash
+# Fetch latest issues
+go run fetch_bounty_issues.go
+
+# Enrich with AI (requires GITHUB_TOKEN)
+python enrich_bounties.py
+
+# Update dashboard
+python update_dashboard.py
+
+# Preview
+python -m http.server 8080
+```
+
+## �🏆 Challenge Program
 
 [![Challenge Program Video](https://blockshopdc.com/static/assets/images/challenge.jpg)](https://link.hygge.work/MayaVick_Challenge)
 
